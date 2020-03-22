@@ -8,5 +8,8 @@ before_script:
   - npm install nightwatch
   - npm install geckodriver --save-dev
   - npm install chromedriver --save-dev
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3 # give xvfb some time to start
 script:
   - npm test
