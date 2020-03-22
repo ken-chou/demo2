@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - lts/*
+addons:
+  chrome: stable
+  firefox: latest
 before_script:
   - npm install nightwatch
   - npm install geckodriver --save-dev
